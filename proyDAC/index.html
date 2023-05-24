@@ -1,0 +1,547 @@
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>EL MEJOR PROFE CHARLLES</title>
+	<link href="css/bootstrap.css" rel="stylesheet" /> <!-- css -->
+	<script src="jquery-3.6.4.js" ></script> <!-- javascript -->
+	<script src="js/bootstrap.js" ></script>
+	<script src="js/bootstrap.bundle.js" ></script>
+
+	<script src="jquery.dataTables.min.js" ></script>
+	<script src="dataTables.bootstrap4.min.js" ></script>
+	<link href="dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+<style>
+ 
+nombrecualquiera{
+	font-size: 45px;
+}
+
+b{
+	text-decoration: underline;
+}
+
+</style>
+
+
+</head>
+<body>
+	<div id="container" class="offset-2">
+		<div class="card">
+			<div class="card-header bg-warning text-white text-center" >
+				<div class="card-title"><h2>TITULO DEL CARD</h2></div>
+			</div>
+			<div class="card-body">
+				<p class="text-success">Párrafo: </p>
+				<b class="text-danger"> Mi mamá </b> me <i> mima </i> mucho en mi <u> casa </u> con mi <s> perro </s>
+				<br /><span class="text-info">Escribir algo</span>
+				<br />
+
+				<div class="row">
+					<div class="col-md-12 text-center">
+						PRIMERO
+					</div>
+					<div class="col-md-6 bg-info">
+						SEGUNDO
+					</div>
+					<div class="col-md-6 bg-success text-right">
+						TERCERO
+					</div>
+					<div class="col-md-4 bg-danger">
+						CUARTO
+					</div>
+					<div class="col-md-4 bg-dark text-white">
+						QUINTO
+					</div>
+					<div class="col-md-4 bg-warning">
+						SEXTO
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-8 bg-secondary">
+						<div class="card">
+							<div class="card-header bg-info">
+								<div class="card-title">TITULO</div>
+							</div>
+							<div class="card-body">
+								NECESARIO
+							</div>
+							<div class="card-footer">
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 bg-primary">
+						<div class="card">
+							<div class="card-header bg-danger">
+								<div class="card-title">TITULO</div>
+							</div>
+							<div class="card-body">
+								OCTAVO
+							</div>
+							<div class="card-footer">
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="card">
+							<div class="card-header bg-dark">
+								<div class="card-title">TITULO</div>
+							</div>
+							<div class="card-body">
+								NOVENO
+							</div>
+							<div class="card-footer">
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="card-footer bg-warning">
+
+			</div>
+		</div>
+
+		<hr />
+		<nombrecualquiera>MEGA HOLA </nombrecualquiera>
+		<h1> HOLAS </h1>
+		<h2> COMO ESTAS </h2>
+		<h3> YO BIEN </h3>
+		<h4> ME ALEGRO </h4>
+		<h5> BUENO BYES </h5>
+		<hr />
+
+		<ul class="list-group" >
+			<li class="list-group-item list-group-item-action" > INICIO </li>
+			<li class="list-group-item list-group-item-info" > EMPLEADO </li>
+			<li class="list-group-item"> DEPARTAMENTO </li>
+		</ul>
+
+		<ol>
+			<li> A </li>
+			<li> B </li>
+			<li> C </li>		
+		</ol>
+		<hr />
+		<img src="" />
+		
+		<hr />
+		<table id="mesa" class="table table-bordered table-striped table-hover">
+			<thead class="bg-warning text-center">
+				<th>NOMBRE</th>
+				<th>CEDULA</th>
+				<th>CORREO</th>
+				<th>OPCIONES</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>CHARLLES PEREZ</td>
+					<td>0914852368</td>
+					<td>CAPECOM@GMAIL.COM</td>
+					<td>
+						<button type="button" class="btn btn-warning" onclick="modalcito_aparece('1','CHARLLES PEREZ','0914785692', 'CAPECOM@GMAIL.COM', '1984-10-26')">ACTUALIZAR</button>
+						<button type="button" class="btn btn-danger" onclick="eliminar('1')">ELIMINAR</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Columna 11 </td>
+					<td>Columna 12 </td>
+					<td>Columna 13 </td>
+					<td>Columna 3 </td>
+				</tr>
+				<tr>
+					<td>Columna 21 </td>
+					<td>Columna 22 </td>
+					<td>Columna 23 </td>
+					<td>Columna 3 </td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<th>NOMBRE</th>
+				<th>CEDULA</th>
+				<th>CORREO</th>
+				<th>OPCIONES</th>
+			</tfoot>
+		</table>
+		<hr />
+		
+		<form id="formulario" method="post" action="guardaris.php" enctype="multipart/form-data">
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<label>NOMBRE : </label>
+					</div>
+					<div class="col-md-8">
+						<input id="nombre" name="nombre" onkeypress="return validarSOLOletras(event)" type="text" maxlength="250" class="form-control text-uppercase" placeholder="Ingrese el nombre del empleado" required/>
+					</div>
+				</div>
+
+				<div class="row" id="esconder">
+					<div class="col-md-2 text-right">
+						<label>CEDULA : </label>
+					</div>
+					<div class="col-md-8">
+						<input type="number" id="ced" name="ced" onkeypress="return validarSOLOnumeros(event)"  step="0.01" min="456" max="9999999999"  class="form-control" placeholder="Ingrese la cédula del empleado" required/>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<label>FECHA DE NACIMIENTO : </label>
+					</div>
+					<div class="col-md-8">
+						<input type="date" id="fnac" name="fnac"  min="2023-05-01" value="2023-05-09" max="2023-05-09" class="form-control" required />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<label>CORREO : </label>
+					</div>
+					<div class="col-md-8">
+						<input type="email" id="correo" name="correo" onchange="validarC()" class="form-control" placeholder="Ingrese el correo personal del empleado" required/>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<label>HORA DE ALMUERZO : </label>
+					</div>
+					<div class="col-md-8">
+						<input type="time" id="halm" name="halm" class="form-control"  />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<label>CONTRASEÑA : </label>
+					</div>
+					<div class="col-md-8">
+						<input id="pass" name="pass" type="password" class="form-control"  placeholder="Ingrese la contraseña del empleado" required />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<label>HOJA DE VIDA : </label>
+					</div>
+					<div class="col-md-8">
+						<input type="file" id="arc" name="arc" class="form-control" accept="image/jpeg"  />
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<label>CIUDAD: </label>
+					</div>
+					<div class="col-md-8">
+						<select CLASS="form-control" id="ciudad" name="ciudad" onchange="obtenerciudad()">
+							<option value="1">GUAYAQUIL</option>
+							<option value="2">CUENCA</option>
+							<option value="3">QUITO</option>
+							<option value="4">ESMERALDAS</option>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<label>SEXO : </label>
+					</div>
+					<div class="col-md-8">
+						<input type="radio" name="rd001" value="1" class="form-check-inline"  checked/> MASCULINO
+						<input type="radio" name="rd001" value="2" class="form-check-inline"  /> FEMENINO
+						<input type="radio" name="rd001" value="3" class="form-check-inline"  /> INDEFINIDO
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<label>TERMINOS Y CONDICIONES : </label>
+					</div>
+					<div class="col-md-8">
+						<input type="checkbox" class="form-check-inline"  /> ACEPTO
+					</div>
+				</div>
+
+
+			</div>
+
+			<a href="#" class="btn btn-success" >LINK A LO Q SEA </a>
+			<button type="button" class="btn btn-danger">NO PRESIONE AQUI </button>
+			<button type="reset" class="btn btn-info">LIMPIAR DATOS </button>
+			<input class="btn btn-warning" type="submit" value="ENVIAR" />
+		</form>
+
+
+	</div>
+
+	<div id="modalcito" class="modal" aria-hidden="true" tabindex="-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-info">
+					<div class="modal-title">EDITAR REGISTROS</div>
+				</div>
+				<div class="modal-body">
+					<form id="formulito" method="post" action="editaris.php" enctype="multipart/form-data">
+						<input type="hidden" id="idregistro" name="idregistro" />
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-2 text-right">
+									<label>NOMBRE : </label>
+								</div>
+								<div class="col-md-8">
+									<input id="Enombre" name="nombre" onkeypress="return validarSOLOletras(event)" type="text" maxlength="250" class="form-control text-uppercase" placeholder="Ingrese el nombre del empleado" required/>
+								</div>
+							</div>
+
+							<div class="row" id="Eesconder">
+								<div class="col-md-2 text-right">
+									<label>CEDULA : </label>
+								</div>
+								<div class="col-md-8">
+									<input type="number" id="Eced" name="ced" onkeypress="return validarSOLOnumeros(event)"  step="0.01" min="456" max="9999999999"  class="form-control" placeholder="Ingrese la cédula del empleado" required/>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-2 text-right">
+									<label>FECHA DE NACIMIENTO : </label>
+								</div>
+								<div class="col-md-8">
+									<input type="date" id="Efnac" name="fnac"  min="2023-05-01" value="2023-05-09" max="2023-05-09" class="form-control" required />
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-2 text-right">
+									<label>CORREO : </label>
+								</div>
+								<div class="col-md-8">
+									<input type="email" id="Ecorreo" name="correo" onchange="validarC()" class="form-control" placeholder="Ingrese el correo personal del empleado" required/>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-2 text-right">
+									<label>HORA DE ALMUERZO : </label>
+								</div>
+								<div class="col-md-8">
+									<input type="time" id="Ehalm" name="halm" class="form-control"  />
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-2 text-right">
+									<label>CONTRASEÑA : </label>
+								</div>
+								<div class="col-md-8">
+									<input id="Epass" name="pass" type="password" class="form-control"  placeholder="Ingrese la contraseña del empleado" required />
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-2 text-right">
+									<label>HOJA DE VIDA : </label>
+								</div>
+								<div class="col-md-8">
+									<input type="file" id="Earc" name="arc" class="form-control" accept="image/jpeg"  />
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-2 text-right">
+									<label>CIUDAD: </label>
+								</div>
+								<div class="col-md-8">
+									<select CLASS="form-control" id="Eciudad" name="ciudad" onchange="obtenerciudad()">
+										<option value="1">GUAYAQUIL</option>
+										<option value="2">CUENCA</option>
+										<option value="3">QUITO</option>
+										<option value="4">ESMERALDAS</option>
+									</select>
+								</div>
+							</div>
+
+
+							<div class="row">
+								<div class="col-md-2 text-right">
+									<label>SEXO : </label>
+								</div>
+								<div class="col-md-8">
+									<input type="radio" name="Erd001" value="1" class="form-check-inline"  checked/> MASCULINO
+									<input type="radio" name="Erd001" value="2" class="form-check-inline"  /> FEMENINO
+									<input type="radio" name="Erd001" value="3" class="form-check-inline"  /> INDEFINIDO
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-2 text-right">
+									<label>TERMINOS Y CONDICIONES : </label>
+								</div>
+								<div class="col-md-8">
+									<input type="checkbox" class="form-check-inline"  /> ACEPTO
+								</div>
+							</div>
+
+
+						</div>
+
+						<div class="row text-center">
+							<div class="col-md-4"><button type="button" class="btn btn-danger">NO PRESIONE AQUI </button></div>
+							<div class="col-md-4"><button type="reset" class="btn btn-info">LIMPIAR DATOS </button></div>
+							<div class="col-md-4"><input class="btn btn-warning" type="submit" value="ENVIAR" /></div>
+						</div>
+					</form>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" CLASS="btn btn-danger" onclick="modalcito_seesconde()">CERRAR</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<script>
+
+	function modalcito_aparece(id, nom, ced, cor, fnaci){
+		$("#modalcito").modal("show");
+		$("#Enombre").val(nom);
+		$("#idregistro").val(id);
+		$("#Eced").val(ced);
+		$("#Ecorreo").val(cor);
+		$("#Efnac").val(fnaci);
+	}
+
+	function modalcito_seesconde(){
+		$("#modalcito").modal("hide");
+	}
+
+	function eliminar(id){
+		alert("Registro eliminado de forma correcta");
+		document.location.href = "elimanaris.php?id=" + id;
+	}
+
+	function obtenerinput(){
+		var mensaje = "";
+		let mensaje2 = "";
+		// mensaje = document.getElementById("nombre").innerHTML;
+		mensaje2 = document.getElementById("nombre").value;
+
+		mensaje = $("#nombre").val();
+		mensaje = mensaje.toUpperCase();
+		alert(mensaje);
+	}
+
+	function obtenerciudad(){
+		let men = $("#ciudad").val();
+		 //men = document.getElementById("ciudad").innerHTML;
+		alert(men);
+	}
+
+	function validarC(){
+		var cor = $("#correo").val();
+		var lugar = cor.indexOf(".");
+		var bandera = false;
+		if (lugar == -1) bandera = true;
+		else{
+			var cont = 0;
+			for (var i=0; i<=cor.length ; i++){
+				if (cor[i]=="@") cont = cont +1;
+			}
+			if ((cont<1) || (cont>1)) bandera =true;
+		}
+		if(bandera){
+			$("#correo").removeClass("border-success");
+			$("#correo").addClass("border-danger");
+			$("#correo").val("");
+			$("#pass").prop("disabled", "disabled");
+			$("#esconder").prop("hidden", true);
+			alert("Escribio mal el correo");
+		}else{
+			$("#correo").removeClass("border-danger");
+			$("#correo").addClass("border-success");
+			$("#pass").removeAttr("disabled");
+			$("#esconder").removeAttr("hidden");
+		}
+
+	}
+
+	function validarN(){
+		let nomb = $("#nombre").val();
+		var bandera = false;
+		if (nomb.indexOf("0")>-1) bandera =true;
+		else if (nomb.indexOf("1")>-1) bandera =true;
+		else if (nomb.indexOf("2")>-1) bandera =true;
+		else if (nomb.indexOf("3")>-1) bandera =true;
+		else if (nomb.indexOf("4")>-1) bandera =true;
+		else if (nomb.indexOf("5")>-1) bandera =true;
+		else if (nomb.indexOf("6")>-1) bandera =true;
+		else if (nomb.indexOf("7")>-1) bandera =true;
+		else if (nomb.indexOf("8")>-1) bandera =true;
+		else if (nomb.indexOf("9")>-1) bandera =true;
+		if (bandera){ //bandera==true
+			alert("No se permite numeros");
+			$("#nombre").val("");
+		}
+
+	}
+
+	function validarSOLOletras(e){
+		let tecla = (document.all) ? e.keyCode : e.which; // 2
+		if (tecla==8) return true; // 3
+		let patron =/[A-Za-z\s]/; // 4
+		let te = String.fromCharCode(tecla); // 5
+		return patron.test(te); // 6
+	}
+
+
+	function validarSOLOnumeros(e){
+		let tecla = (document.all) ? e.keyCode : e.which; // 2
+		if (tecla==8) return true; // 3
+		let patron =/[0-9]/; // 4
+		let te = String.fromCharCode(tecla); // 5
+		return patron.test(te); // 6
+	}
+
+	$(document).ready(function () {
+		$('#mesa').DataTable({
+			"language": {
+				"processing": "Procesando...",
+				"lengthMenu": "Mostrar _MENU_ registros",
+				"zeroRecords": "No se encontraron resultados",
+				"emptyTable": "Ningún dato disponible en esta tabla",
+				"info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+				"infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+				"infoFiltered": "(filtrado de un total de _MAX_ registros)",
+				"search": "Buscar:",
+				"infoThousands": ",",
+				"loadingRecords": "Cargando...",
+				"paginate": {
+					"first": "Primero",
+					"last": "Último",
+					"next": "Siguiente",
+					"previous": "Anterior"
+				},
+			}
+		});
+	});
+
+
+</script>
+
+
+</body>
+
+</html>
