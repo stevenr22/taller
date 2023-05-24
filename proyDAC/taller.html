@@ -30,10 +30,10 @@
                                 <label>Datos: </label>
                             </div>
                             <div class="col-md-5">
-                                <input id="cedula" name="cedula" type="text" maxlength="10" class="form-control border-danger" placeholder="Ingrese la cédula" required/>
+                                <input id="cedula" name="cedula" type="text" onkeypress="return validarSOLOnumeros(event)" maxlength="10" class="form-control border-danger" placeholder="Ingrese la cédula" required/>
                             </div>
                             <div class="col-md-5">
-                                <input id="cedula" name="cedula" type="text" maxlength="10" class="form-control border-danger" placeholder="Ingrese nombre y apellidos de la persona" required/>
+                                <input id="nombre_apellidos" name="nombre_apellidos" type="text" onkeypress="return validarSOLOletras(event)" class="form-control border-danger" placeholder="Ingrese nombre y apellidos de la persona" required/>
                             </div>
                         </div>
                         <div class="row">
@@ -65,13 +65,13 @@
                                 <label>Ubicación: </label>
                             </div>
                             <div class="col-md-3">
-                                <input id="text" name="provincia" type="text"  class="form-control" placeholder="Ingrese la Provincia"/>
+                                <input id="text" name="provincia" type="text" onkeypress="return validarSOLOletras(event)"  class="form-control" placeholder="Ingrese la Provincia"/>
                             </div>
                             <div class="col-md-4">
-                                <input id="text" name="canton" type="text" class="form-control" placeholder="Ingrese el Cantón"/>
+                                <input id="text" name="canton" type="text" onkeypress="return validarSOLOletras(event)" class="form-control" placeholder="Ingrese el Cantón"/>
                             </div>
                             <div class="col-md-3">
-                                <input id="text" name="parroquia" type="text" class="form-control" placeholder="Ingrese el Parroquia"/>
+                                <input id="text" name="parroquia" type="text" onkeypress="return validarSOLOletras(event)" class="form-control" placeholder="Ingrese el Parroquia"/>
                             </div>
                         </div>
                         <br>
@@ -93,22 +93,24 @@
                                 <label>Barrio: </label>
                             </div>
                             <div class="col-md-3">
-                                <input id="text" name="barrio" type="text" class="form-control border-success" placeholder="Ingrese su barrio"/>
+                                <input id="text" name="barrio" type="text" onkeypress="return validarSOLOletras(event)" class="form-control border-success" placeholder="Ingrese su barrio"/>
                             </div>
                             <div class="cold-md-1">
                                 <label>Total: </label>
                             </div>
                             <div class="col-md-2">
-                                <input id="text" name="hombre" type="number" class="form-control"/>
+                                <input id="hombre" name="hombre" type="number" onkeypress="return validarSOLOnumeros(event)" class="form-control"/>
                             </div>
                             +
                             <div class="col-md-2">
-                                <input id="text" name="mujer" type="number" class="form-control"/>
+                                <input id="mujer" name="mujer" type="number" onkeypress="return validarSOLOnumeros (event)" class="form-control"/>
                             </div>
                             =
                             <div class="col-md-2">
-                                <input id="text" name="total" type="number" class="form-control"/>
+                                <label id="total" name="total" type="text" class="form-control" style="height: 35px;">
                             </div>
+                            <br><button type="button" class="btn bg-secondary" onclick="Sumar()">Sumar</button>
+
                         </div>
                         <br>
                         <div class="row">
@@ -116,7 +118,7 @@
                                 <label>No. Hogares: </label>
                             </div>
                             <div class="col-md-3">
-                                <input id="text" name="no_hogares" type="number" class="form-control border-danger"/>
+                                <input id="text" name="no_hogares" type="number" onkeypress="return validarSOLOnumeros(event)" class="form-control border-danger"/>
                             </div>  
                         </div>
                     </div>
@@ -127,18 +129,7 @@
                 <p class="text-success">- ksjdfosofhs</p>
             </div>
                 
-    
-
-
-
-
-
-
-
-
-
-
-
+            <!--EMPIEZA LAS CARTAS DE ABAJO-->
         </div>
         <div class="row">
             <div class="col-md-4 border-white">
@@ -151,13 +142,9 @@
                             <form>
                                 <div class="form-group">
                                 
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
+                                    <input type="checkbox" class="form-check-inline"> No sirve<br>
+                                    <input type="checkbox" class="form-check-inline"> No sirve<br>
+
                                 </div>        
                                         
                             </form>
@@ -171,13 +158,8 @@
                             <form>
                                 <div class="form-group">
                                 
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
+                                    <input type="checkbox" class="form-check-inline"> No sirve<br>
+                                    <input type="checkbox" class="form-check-inline"> No sirve<br>
                                 </div>        
                                         
                             </form>
@@ -191,13 +173,8 @@
                             <form>
                                 <div class="form-group">
                                 
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
-                                    <input type="checkbox"> No sirve<br>
+                                    <input type="checkbox" class="form-check-inline"> No sirve<br>
+                                    <input type="checkbox" class="form-check-inline"> No sirve<br>
                                 </div>        
                                         
                             </form>
@@ -206,25 +183,42 @@
                
             </div>
 
+            <!--TARJETAS LADO DERECHO-->
 
             <div class="col-md-4">
                 
+                <div class="card border-dark text-white" style="background-color: rgb(20, 16, 255);">
+                    <p><b>¿De que investigadored de baño es la vivneda?</b></p>
+                </div>
+                <div class="col-md-12 text-center">
+                    HOKAJFOSDNFJSODKNFOJSNON
+                </div>
                 <div class="card border-dark" style="background-color: rgb(130, 128, 255);">
-                    <p><b>1. ¿De que investigadored de baño es la vivneda?</b></p>
-                    <p>njdfonogfnfgodf</p>
-                            
-                    <form>
-                        <div class="form-group">
-                        
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                        </div>        
+      
+                    <form style="font-size: 13px;">
+                        <div class="col-md-12" style="background-color: aqua;">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label"> HDMI1: CANTIDAD DE PERSONAS EN HOGAR </label>
+                                <input class="form-check-input" type="checkbox">
+                                <input class="form-check-input" type="checkbox">
+                            </div> 
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label"> HDMI2: CANTIDAD DE PERSONAS EN HOGAR </label>
+                                <input class="form-check-input" type="checkbox">
+                                <input class="form-check-input" type="checkbox">
+                            </div> 
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label"> HDMI3: CANTIDAD DE PERSONAS EN HOGAR </label>
                                 
+                                <input class="form-check-input" type="checkbox">
+                                <input class="form-check-input" type="checkbox">
+                            </div> 
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label"> HDMI4: CANTIDAD DE PERSONAS EN HOGAR </label>
+                                <input class="form-check-input" type="checkbox">
+                                <input class="form-check-input" type="checkbox">
+                            </div> 
+                        </div>       
                     </form>
                 </div>
                 <div class="card border-dark" style="background-color: rgb(130, 128, 255);">
@@ -234,31 +228,8 @@
                     <form>
                         <div class="form-group">
                         
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                        </div>        
-                                
-                    </form>
-                </div>
-                <div class="card border-dark" style="background-color: rgb(130, 128, 255);">
-                    <p><b>1. ¿De que investigadored de baño es la vivneda?</b></p>
-                    <p>njdfonogfnfgodf</p>
-                            
-                    <form>
-                        <div class="form-group">
-                        
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
-                            <input type="checkbox"> No sirve<br>
+                            <input type="checkbox" class="form-check-inline"> No sirve<br>
+                            <input type="checkbox" class="form-check-inline"> No sirve<br>
                         </div>        
                                 
                     </form>
@@ -272,11 +243,34 @@
             
             
         </div>
-        
-           
-        
-        
-
     </div>
+<script>
+	function validarSOLOletras(e){
+		let tecla = (document.all) ? e.keyCode : e.which; // 2
+		if (tecla==8) return true; // 3
+		let patron =/[A-Za-z\s]/; // 4
+		let te = String.fromCharCode(tecla); // 5
+		return patron.test(te); // 6
+	}
+	function validarSOLOnumeros(e){
+		let tecla = (document.all) ? e.keyCode : e.which; // 2
+		if (tecla==8) return true; // 3
+		let patron =/[0-9]/; // 4
+		let te = String.fromCharCode(tecla); // 5
+		return patron.test(te); // 6
+	}
+    function Sumar(){
+		var numero1 = document.getElementById("hombre").value;
+        var numero2 = document.getElementById("mujer").value;
+        if (isNaN(numero1) || isNaN(numero2)) {  
+            alert("Es necesarios introducir dos números válidos");  
+        } else {  
+            //si no ponemos parseFloat concatenaría x con y  
+            suma=parseFloat(numero1)+parseFloat(numero2);  
+            text= suma;  
+        };
+        document.getElementById("total").innerHTML = text; 
+    }
+</script>
 </body>
 </html>
